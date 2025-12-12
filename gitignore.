@@ -1,0 +1,25 @@
+# Output / logs
+*.log
+report.txt
+tools.log
+data/
+output/
+results/
+tmp/
+
+# Archives
+*.zip
+*.7z
+*.tar
+*.gz
+
+# Memory images (DO NOT COMMIT)
+*.mem
+*.raw
+*.dmp
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
