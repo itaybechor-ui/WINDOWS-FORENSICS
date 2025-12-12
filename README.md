@@ -133,7 +133,7 @@ cd WINDOWS-FORENSICS
 # 3. Make the main script executable
 chmod +x wfproj.sh 
 
-## Project Documents
+## 📄 Full Project Report (PDF)
 
-- [Windows Forensics Project Report (PDF)](WFPROJ.pdf)
-
+You can view the full Windows Forensics project report here:
+[Download WFPROJ.pdf](docs/WFPROJ.pdf)
