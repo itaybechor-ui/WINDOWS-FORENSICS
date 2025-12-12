@@ -1,5 +1,10 @@
 # WINDOWS-FORENSICS 🕵‍♂
 
+## 📄 Full Project Report (PDF)
+
+You can view the full Windows Forensics project report here:  
+[Download WFPROJ.pdf](docs/WFPROJ.pdf)
+
 ![Windows Forensics – Report](example.png)
 ![Windows Forensics – Carved Files](example1.png)
 ![Windows Forensics – bulk_extractor Results](example2.png)
@@ -133,7 +138,4 @@ cd WINDOWS-FORENSICS
 # 3. Make the main script executable
 chmod +x wfproj.sh 
 
-## 📄 Full Project Report (PDF)
 
-You can view the full Windows Forensics project report here:
-[Download WFPROJ.pdf](docs/WFPROJ.pdf)
