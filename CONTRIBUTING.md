@@ -33,4 +33,29 @@ cd WINDOWS-FORENSICS
 chmod +x wfproj.sh
 
 # Run the project (on Kali or another Linux)
-./wfproj.sh 
+./wfproj.sh
+
+---
+
+## 🧊 Coding & Documentation Style
+
+- The main script is written in *Bash* – please keep the same style:
+  - Clear function names
+  - Comments in *English*
+  - No hard-coded absolute paths when possible
+
+- Keep log file names and directory structure consistent  
+  (for example: logs/<timestamp>/bulk_extractor.log, data/report.txt).
+
+- When updating the documentation:
+  - Keep the README structure (Overview, Tools, Usage, etc.)
+  - Add examples or screenshots when relevant
+
+---
+
+## 🔐 Legal & Ethical Notice
+
+This project is for *educational and security training purposes only*.  
+Any contribution must respect this goal and *must not* promote or enable  
+unauthorized access to systems or data.
+
