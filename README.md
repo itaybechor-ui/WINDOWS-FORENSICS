@@ -215,15 +215,15 @@ text
 WINDOWS-FORENSICS/
 ├── README.md
 ├── wfproj.sh
-├── memdump.mem
-├── data/
-│   ├── bulki/
-│   ├── bulki_winpe/
-│   ├── foremost/
-│   ├── scalpel/
-│   └── strings/
-├── report.txt
-└── 20251121_132710/
+├── memdump.mem               # Input evidence
+├── data/                     # Main output directory
+│   ├── bulki/                # bulk_extractor outputs
+│   ├── bulki_winpe/          # bulk_extractor winpe scanner outputs
+│   ├── foremost/             # foremost carved files
+│   ├── scalpel/              # scalpel carved files
+│   └── strings/              # strings outputs
+├── report.txt                # Final summary report
+└── 20251121_132710/          # Timestamped run folder (logs + summaries)
     ├── tools.log
     ├── files_summary.log
     └── run.log
@@ -236,55 +236,59 @@ WINDOWS-FORENSICS/
 This section summarizes what each tool produced in *this specific run*:
 
 ### bulk_extractor
-- Performs feature extraction on raw memory and artifacts.
+- Performs feature extraction on raw memory and artifacts
 - In this run it generated:
   - bulki/ → *3183 files*
   - bulki_winpe/ → *781 files*
 - File-type highlights (from summary):
-  - *winpe: 1554, **exe: 92, **dll: 75, **txt: 83, **pcap: 1* (and more)
+  - *winpe: 1554, **exe: 92, **dll: 75, **txt: 83, **pcap: 1*
 
 ### strings
-- Extracts printable strings from the memory image.
+- Extracts printable strings from the memory image
 - Output folder: strings/ → *13 files*
 
 ### foremost
-- File carving based on headers/footers to recover file types.
+- File carving based on headers/footers
 - Output folder: foremost/ → *172 files*
 
 ### scalpel
-- Additional carving tool (may recover different/extra artifacts).
+- Additional carving tool (sometimes recovers different artifacts than foremost)
 - Output folder: scalpel/ → *0 files* (in this run)
 
 ### binwalk
-- Scans the memory image for embedded signatures/compressed data.
-- Results are recorded in the run logs (e.g., tools.log / run.log)
+- Scans the memory image for embedded signatures and compressed blobs
+- Results are recorded in the run logs (e.g., tools.log)
 
 ### exiftool
-- Extracts metadata from carved files (images/docs).
-- Results are recorded in logs and/or included in the final report.
+- Extracts metadata from carved files (images/documents)
+- Results are recorded in logs and/or exported summaries
 
 ---
 
 ## Future Improvements
 
-- Add argument parsing (custom input path, output dir).
-- Add Volatility integration (process list, network, dlls, etc.).
-- Generate HTML/PDF report automatically.
-- Improve summary tables and artifact categorization.
+- Add argument support (custom input path instead of fixed memdump.mem)
+- Add automatic dependency check + installer helper
+- Add optional JSON output report for easy parsing
+- Improve report formatting (tables + sections)
+- Add more memory-forensics tools (optional modules)
 
 ---
 
 ## Hebrew Summary
 
-פרויקט אוטומטי ל־*Windows Memory Forensics* שמריץ כלים קלאסיים על קובץ זיכרון memdump.mem, שומר תוצרים בצורה מסודרת לפי תיקיות/לוגים, ומייצר דוח מסכם.
+פרויקט אוטומטי ל־*Windows Memory Forensics* ב־Bash.  
+הסקריפט wfproj.sh מנתח קובץ זיכרון (memdump.mem) ומריץ כלים פורנזיים קלאסיים (bulk_extractor / foremost / scalpel / binwalk / exiftool).  
+בסיום הוא יוצר:
+- תיקיית data/ עם פלטים מסודרים
+- תיקיית ריצה עם Timestamp ללוגים
+- דוח מסכם report.txt שמרכז את הממצאים
 
 ---
 
 ## Contact
 
-*Itay Bechor*  
-GitHub: https://github.com/itaybechor-ui 
-
+- GitHub: *itaybechor-ui*
 
 
 
