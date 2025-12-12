@@ -1,5 +1,9 @@
 # WINDOWS-FORENSICS 🕵‍♂
 
+[![ShellCheck](https://github.com/itaybechor-ui/WINDOWS-FORENSICS/actions/workflows/shellcheck.yml/badge.svg)](https://github.com/itaybechor-ui/WINDOWS-FORENSICS/actions/workflows/shellcheck.yml)
+
+
+
 ## 📄 Full Project Report (PDF)
 
 You can view the full Windows Forensics project report here:  
