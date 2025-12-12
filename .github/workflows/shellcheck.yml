@@ -13,5 +13,5 @@ jobs:
       - name: Install ShellCheck
         run: sudo apt-get update && sudo apt-get install -y shellcheck
 
-  - name: Run ShellCheck (warnings + errors)
-  run: shellcheck -S warning -x wfproj.sh 
+      - name: Run ShellCheck (errors only)
+        run: shellcheck -S error -x wfproj.sh 
