@@ -8,6 +8,10 @@
 ![Bash](https://img.shields.io/badge/Shell-Bash-4EAA25?logo=gnu-bash&logoColor=white)
 ![Status](https://img.shields.io/badge/Project-Windows_Forensics-brightgreen)
 
+> ⚠ *DISCLAIMER:* This project is for educational and security training purposes only.  
+> It analyzes Windows memory images (like memdump.mem) inside a controlled lab environment  
+> and must *not* be used on systems without explicit authorization.
+
 Automated *Windows Memory Forensics* project written in Bash as part of my Cyber Security studies at *John Bryce College*.  
 The main script wfproj.sh analyzes a Windows memory image (memdump.mem) using classic forensics tools and generates a structured report with all findings.
 
