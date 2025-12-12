@@ -1,5 +1,7 @@
 # WINDOWS-FORENSICS 🕵‍♂
 
+![Windows Forensics Example](example.png)
+
 ![Linux](https://img.shields.io/badge/Linux-Kali-orange?logo=linux&logoColor=white)
 ![Bash](https://img.shields.io/badge/Shell-Bash-4EAA25?logo=gnu-bash&logoColor=white)
 ![Status](https://img.shields.io/badge/Project-Windows_Forensics-brightgreen)
