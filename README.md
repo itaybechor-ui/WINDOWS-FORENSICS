@@ -5,9 +5,10 @@
 You can view the full Windows Forensics project report here:  
 [Download WFPROJ.pdf](docs/WFPROJ.pdf)
 
-![Windows Forensics – Report](example.png)
-![Windows Forensics – Carved Files](example1.png)
-![Windows Forensics – bulk_extractor Results](example2.png)
+## 🖼 Screenshots (Quick Proof)
+![Windows Forensics - Report](assets/screenshots/windows-forensics-report.png)
+![Windows Forensics - Carved Files](assets/screenshots/windows-forensics-carved-files.png)
+![Windows Forensics - bulk_extractor Results](assets/screenshots/windows-forensics-bulk-extractor-results.png)
 
 ![Linux](https://img.shields.io/badge/Linux-Kali-orange?logo=linux&logoColor=white)
 ![Bash](https://img.shields.io/badge/Shell-Bash-4EAA25?logo=gnu-bash&logoColor=white)
