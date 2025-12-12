@@ -1,6 +1,8 @@
 # WINDOWS-FORENSICS 🕵‍♂
 
-![Windows Forensics Example](example.png)
+![Windows Forensics – Report](example.png)
+![Windows Forensics – Carved Files](example1.png)
+![Windows Forensics – bulk_extractor Results](example2.png)
 
 ![Linux](https://img.shields.io/badge/Linux-Kali-orange?logo=linux&logoColor=white)
 ![Bash](https://img.shields.io/badge/Shell-Bash-4EAA25?logo=gnu-bash&logoColor=white)
