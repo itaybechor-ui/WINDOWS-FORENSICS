@@ -335,7 +335,7 @@ PCAP() {
     # Otherwise use the default path to memdump.mem
 
 
-  BULK_DIR="$DIR/bulki"
+ 
     # BULK_DIR = directory where bulk_extractor originally wrote its output
 
   NET_DIR="$DIR/bulki_net"
