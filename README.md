@@ -25,18 +25,18 @@ The main script wfproj.sh analyzes a Windows memory image (memdump.mem) using cl
 ## 📚 Table of Contents
 
 - [Overview](#overview)
-- [Tools Used](#-tools-used)
-- [Evidence](#-evidence)
-- [Architecture](#-architecture)
-- [Requirements](#-requirements)
-- [Installation](#-installation)
-- [Usage](#-usage)
-- [Example Output](#-example-output)
-- [Project Structure](#-project-structure)
-- [Forensics Coverage](#-forensics-coverage)
-- [Future Improvements](#-future-improvements)
-- [Hebrew Summary](#-hebrew-summary)
-- [Contact](#-contact)
+- [Tools Used](#tools-used)
+- [Evidence](#evidence)
+- [Architecture](#architecture)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Example Output](#example-output)
+- [Project Structure](#project-structure)
+- [Forensics Coverage](#forensics-coverage)
+- [Future Improvements](#future-improvements)
+- [Hebrew Summary](#hebrew-summary)
+- [Contact](#contact)
 
 ---
 
@@ -93,6 +93,11 @@ You can replace memdump.mem with your own memory image (same filename or adjust 
 
 ---
 
+
+
+
+
+
 ## 🧱 Architecture
 
 High-level flow of wfproj.sh:
@@ -126,16 +131,180 @@ On Kali, most of these tools can be installed via apt.
 
 ---
 
+
+
+
+
 ## 📥 Installation
 
-```bash
-# 1. Clone the repository
+bash
+# 1) Clone the repository
 git clone https://github.com/itaybechor-ui/WINDOWS-FORENSICS.git
 
-# 2. Enter the project directory
+# 2) Enter the project directory
 cd WINDOWS-FORENSICS
 
-# 3. Make the main script executable
-chmod +x wfproj.sh 
+# 3) Make the main script executable
+chmod +x wfproj.sh
+
+
+---
+
+## ▶ Usage
+
+bash
+# Run the pipeline (make sure memdump.mem exists in the expected path)
+./wfproj.sh
+
+
+Outputs are saved under:
+- data/ (main outputs)
+- a timestamped run folder (logs + summaries)
+
+---
+
+## Example Output
+
+text
+====================  Forensic Analysis Report  ====================
+
+Date               : Wed Nov 19 12:07:52 PM EST 2025
+Memory image file  : /home/kali/wjproj/memdump.mem
+Data directory     : /root/wfproj/data
+
+Analysis time      : 215 s
+Total files found  : 4158
+
+Subdirectories under data:
+  data
+  bulki_winpe
+  bulki
+  strings
+  foremost
+  scalpel
+
+Files per subdirectory:
+  bulki        : 3183 files
+  bulki_winpe  : 781 files
+  foremost     : 172 files
+  scalpel      : 0 files
+  strings      : 13 files
+
+[+] Tools log saved to:        /20251121_132710/tools.log
+[+] Files summary saved to:    /20251121_132710/files_summary.log
+[+] Run log saved to:          /20251121_132710/run.log
+
+Files per extension (file types):
+  winpe : 1554 files
+  exe   : 92 files
+  txt   : 83 files
+  dll   : 75 files
+  mft   : 9 files
+  indx  : 4 files
+  xml   : 2 files
+  wav   : 2 files
+  bmp   : 2 files
+  pcap  : 1 files
+
+
+---
+
+## Project Structure
+
+text
+WINDOWS-FORENSICS/
+├── README.md
+├── wfproj.sh
+├── memdump.mem
+├── data/
+│   ├── bulki/
+│   ├── bulki_winpe/
+│   ├── foremost/
+│   ├── scalpel/
+│   └── strings/
+├── report.txt
+└── 20251121_132710/
+    ├── tools.log
+    ├── files_summary.log
+    └── run.log
+
+
+---
+
+## Forensics Coverage
+
+This section summarizes what each tool produced in *this specific run*:
+
+### bulk_extractor
+- Performs feature extraction on raw memory and artifacts.
+- In this run it generated:
+  - bulki/ → *3183 files*
+  - bulki_winpe/ → *781 files*
+- File-type highlights (from summary):
+  - *winpe: 1554, **exe: 92, **dll: 75, **txt: 83, **pcap: 1* (and more)
+
+### strings
+- Extracts printable strings from the memory image.
+- Output folder: strings/ → *13 files*
+
+### foremost
+- File carving based on headers/footers to recover file types.
+- Output folder: foremost/ → *172 files*
+
+### scalpel
+- Additional carving tool (may recover different/extra artifacts).
+- Output folder: scalpel/ → *0 files* (in this run)
+
+### binwalk
+- Scans the memory image for embedded signatures/compressed data.
+- Results are recorded in the run logs (e.g., tools.log / run.log)
+
+### exiftool
+- Extracts metadata from carved files (images/docs).
+- Results are recorded in logs and/or included in the final report.
+
+---
+
+## Future Improvements
+
+- Add argument parsing (custom input path, output dir).
+- Add Volatility integration (process list, network, dlls, etc.).
+- Generate HTML/PDF report automatically.
+- Improve summary tables and artifact categorization.
+
+---
+
+## Hebrew Summary
+
+פרויקט אוטומטי ל־*Windows Memory Forensics* שמריץ כלים קלאסיים על קובץ זיכרון memdump.mem, שומר תוצרים בצורה מסודרת לפי תיקיות/לוגים, ומייצר דוח מסכם.
+
+---
+
+## Contact
+
+*Itay Bechor*  
+GitHub: https://github.com/itaybechor-ui 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
